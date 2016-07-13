@@ -1,17 +1,19 @@
-var windowWidth = 0,
-    columnCount,
-    containerWidth,
-    columns = [],
-    isActive = false,
-    startPhase = true;
+$(function(){
+    
+    var windowWidth = 0,
+        columnCount,
+        containerWidth,
+        columns = [],
+        isActive = false,
+        startPhase = true;
 
-// ADJUST WIDTH OF COLUMNS AND GUTTERS
-var columnWidth = 300,
-    gutter = 40;
+    // ADJUST WIDTH OF COLUMNS AND GUTTERS
+    var columnWidth = 300,
+        gutter = 40;
 
-$(window).load(resize);
-$(window).resize(resize);
-
+    $(window).load(resize);
+    $(window).resize(resize);
+});
 function resize(phase){
 
     // INITIALLY SET COLUMN AND GUTTER CSS
