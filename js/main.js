@@ -13,7 +13,9 @@ $(function(){
 
     $(window).load(resize);
     $(window).resize(resize);
+    
 });
+
 function resize(phase){
 
     // INITIALLY SET COLUMN AND GUTTER CSS
