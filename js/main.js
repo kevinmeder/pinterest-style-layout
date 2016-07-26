@@ -31,7 +31,7 @@ $(function(){
             containerWidth = columnCount*columnWidth;
             $("ul.pins").css({"width": containerWidth + "px"});
             
-            // CLEAR COLUMN ARRAY FOR WHEN SCREEN IS RESIZED
+            // CLEAR COLUMN ARRAY FOR WHEN WINDOW IS RESIZED
             columns = [];
 
             for(var i = 0; i < columnCount; i++){
