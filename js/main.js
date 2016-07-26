@@ -30,6 +30,9 @@ $(function(){
             columnCount = (columnCount === 0) ? 1 : columnCount ;    
             containerWidth = columnCount*columnWidth;
             $("ul.pins").css({"width": containerWidth + "px"});
+            
+            // CLEAR COLUMN ARRAY FOR WHEN SCREEN IS RESIZED
+            columns = [];
 
             for(var i = 0; i < columnCount; i++){
                 columns[i] = 0; 
