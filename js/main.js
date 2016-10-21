@@ -7,7 +7,7 @@ $(function(){
         isActive = false,
         startPhase = true;
 
-    // ADJUST WIDTH OF COLUMNS AND GUTTERS
+    // adjust width of columns and gutters
     var columnWidth = 400,
         gutter = 30;
 
@@ -16,14 +16,14 @@ $(function(){
 
     function resize(phase){
 
-        // INITIALLY SET COLUMN AND GUTTER CSS
+        // set column and gutter css
         if(startPhase === true){
             $("ul.pins").css({ "min-width": columnWidth + "px" });
             $("ul.pins li").css({ "width": (columnWidth-gutter) + "px", "padding": "0px " + (gutter/2) + "px" });
             startPhase = false;
         }
 
-        // SETS LAYOUT BASED ON COLUMN COUNT
+        // sets layout based on column count
         if(windowWidth !== $(window).width()){
             windowWidth = $(window).width();
             columnCount = Math.floor(windowWidth/columnWidth);
@@ -31,7 +31,7 @@ $(function(){
             containerWidth = columnCount*columnWidth;
             $("ul.pins").css({"width": containerWidth + "px"});
             
-            // CLEAR COLUMN ARRAY FOR WHEN WINDOW IS RESIZED
+            // clear column array for window resize
             columns = [];
 
             for(var i = 0; i < columnCount; i++){
@@ -52,7 +52,7 @@ $(function(){
 
         }
 
-        // CHECK FOR COMPLETION INITIAL LOAD TO SET TRANSITION CSS TO PINS
+        // check for completion of initial load to set css transitions for pins
         if(isActive === false){
             $("ul.pins li").addClass("active");
             setTimeout(function(){
